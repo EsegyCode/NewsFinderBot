@@ -1,22 +1,22 @@
 from telethon import TelegramClient, events
 
 # Вводимо API ID та HASH мого тг
-api_id = 1234567
-api_hash = 'abcdef123456abcdef123456abcdef12'
+api_id = 21340180
+api_hash = 'c9f2ebb3b8619dc3ae88991b33f833c8'
 
 
 # об'єкт Telegram клієнта
 client = TelegramClient("TestSession", api_id, api_hash)
 
 
-target_can = -1009876543210  # Приклад ID(сюди буде пересилатись повідомлення)
+target_can =  -1002404770941  # Приклад ID(сюди буде пересилатись повідомлення)
 
 # Ключові слова, які шукати в повідомленнях
 key_words = ["Америка", "Американський", "USA", "America"]
 
 
 # обробляємо події
-@client.on(events.NewMessage(chats=[-1001234567890, -1009876543210]))  # Канали в яких йде пошук
+@client.on(events.NewMessage(chats=[-1002404802004, -1001413275904, -1001405303803,  -1001352726486]))  # Канали в яких йде пошук
 async def normal_handler(event):
     # Перебираємо ключі
     for word in key_words:
